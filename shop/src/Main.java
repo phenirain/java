@@ -1,6 +1,4 @@
-import java.sql.Array;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -45,8 +43,8 @@ public class Main {
             } else if (choice.equals("2")) {
                 if (customers.isEmpty()) System.out.println("Нет ни одного покупателя");
                 else {
-                    for (int i = 0; i < customers.size(); i++) {
-                        Object[] purchase = (Object[]) customers.get(i);
+                    for (Object o : customers) {
+                        Object[] purchase = (Object[]) o;
                         String[] item = (String[]) purchase[3];
                         System.out.printf("Заказчик: %s%nКонтакты: %s - %s%nТовар: %s - %s%nКоличество: %d%n" +
                                         "////////////////////////%n",
@@ -55,7 +53,7 @@ public class Main {
                                 purchase[2],
                                 item[0],
                                 item[1],
-                                (int)purchase[4]
+                                (int) purchase[4]
                         );
                     }
                 }
