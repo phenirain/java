@@ -1,14 +1,15 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         String[] titles = new String[]{"ROLEX", "CASIO", "CARTIER", "PATEK PHILIPPE"};
         String[][] marks = new String[][]{
-                {"ROLEX", "aaaa"},
-                {"CASIO","bbbb"},
-                {"CARTIER", "cccc"},
-                {"PATEK PHILIPPE", "eeee"}
+                {titles[0], "aaaa"},
+                {titles[1],"bbbb"},
+                {titles[2], "cccc"},
+                {titles[3], "eeee"}
         };
 
         ArrayList<Object> customers = new ArrayList<Object>();
@@ -33,13 +34,17 @@ public class Main {
                     if (marks[i][0] != null) System.out.printf("Товар %d: %s - %s,%n", i + 1,marks[i][0], marks[i][1]);
                 }
                 int id = sc.nextInt();
-                sc.nextLine();
-                System.out.print("Введите количество: ");
-                count = sc.nextInt();
-                sc.nextLine();
-                customers.add(new Object[]
-                        {customer, email, phone, new String[] {titles[id - 1], marks[id - 1][1]}, count});
-                marks[id - 1][0] = null;
+                if (marks[id - 1][0] != null) {
+                    sc.nextLine();
+                    System.out.print("Введите количество: ");
+                    count = sc.nextInt();
+                    sc.nextLine();
+                    customers.add(new Object[]
+                            {customer, email, phone, new String[] {titles[id - 1], marks[id - 1][1]}, count});
+                    marks[id - 1][0] = null;
+                } else {
+                    System.out.println("Нет такого продукта");
+                }
             } else if (choice.equals("2")) {
                 if (customers.isEmpty()) System.out.println("Нет ни одного покупателя");
                 else {
@@ -57,7 +62,7 @@ public class Main {
                         );
                     }
                 }
-            } else {
+            } else if (choice.equals("3")){
                 System.out.println("Пока");
                 sc.close();
                 break;
