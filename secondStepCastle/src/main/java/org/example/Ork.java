@@ -1,5 +1,7 @@
 package org.example;
 
+import java.io.IOException;
+
 public class Ork extends Resident {
 
     public Ork(String name, int reputation) {
@@ -7,7 +9,7 @@ public class Ork extends Resident {
     }
 
     @Override
-    public void performAction(int reputation, double award) {
+    public void performAction(int reputation, double award) throws IOException {
         System.out.printf("Орк - %s защитил замок\n", getName());
         plusReputation(reputation);
         plusBalance(award);
