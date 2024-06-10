@@ -1,0 +1,11 @@
+{
+  "parent": "block/cube_all",
+  "textures" : {
+    "down": "main:block/manure_block",
+    "up": "main:block/manure_block",
+    "north": "main:block/manure_block",
+    "south": "main:block/manure_block",
+    "west": "main:block/manure_block",
+    "east": "main:block/manure_block"
+  }
+}

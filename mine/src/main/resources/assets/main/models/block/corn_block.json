@@ -1,0 +1,11 @@
+{
+  "parent": "block/cube_all",
+  "textures" : {
+    "down": "main:block/corn_block",
+    "up": "main:block/corn_block",
+    "north": "main:block/corn_block",
+    "south": "main:block/corn_block",
+    "west": "main:block/corn_block",
+    "east": "main:block/corn_block"
+  }
+}

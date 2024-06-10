@@ -1,0 +1,11 @@
+{
+  "parent": "block/cube_all",
+  "textures" : {
+    "down": "main:block/brick",
+    "up": "main:block/brick",
+    "north": "main:block/brick_oven",
+    "south": "main:block/brick",
+    "west": "main:block/brick",
+    "east": "main:block/brick"
+  }
+}

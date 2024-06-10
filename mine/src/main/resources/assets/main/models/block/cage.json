@@ -1,0 +1,11 @@
+{
+  "parent": "block/cube_all",
+  "textures" : {
+    "down": "main:block/cage",
+    "up": "main:block/cage",
+    "north": "main:block/cage",
+    "south": "main:block/cage",
+    "west": "main:block/cage",
+    "east": "main:block/cage"
+  }
+}
